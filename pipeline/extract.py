@@ -21,10 +21,10 @@ from models.schemas import (
     ConfidenceLevel, ExtractionRun, ProjectManifest, TakeoffItem,
 )
 
-AI_PROVIDER = os.getenv("AI_PROVIDER", "anthropic").lower()
+AI_PROVIDER = os.getenv("AI_PROVIDER", "openrouter").lower()
 ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-opus-4-5")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
-OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "google/gemini-2.0-flash-exp:free")
+OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "openai/gpt-4o")
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 MAX_PAGES_PER_FILE = int(os.getenv("MAX_PAGES_PER_FILE", "6"))
 MAX_FILES_PER_PROJECT = int(os.getenv("MAX_FILES_PER_PROJECT", "999"))
